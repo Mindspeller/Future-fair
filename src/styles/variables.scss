@@ -1,0 +1,150 @@
+// ============================================
+// Neuroprofiling Global Variables
+// ============================================
+// Central source for all CSS custom properties, tokens, and design system values
+// Used across neuroprofiling landing page and authenticated app views
+
+// --------------------------------------------
+// Typography Scales (Fluid Responsive)
+// --------------------------------------------
+// Desktop base sizes (default, no media query)
+$hero-primary-fs: 0.7rem;
+$btn-fs: 0.66rem;
+$small-btn-fs: 0.64rem;
+$flow-cta-fs: 0.75rem;
+
+// Tablet breakpoint overrides (≤780px)
+$hero-primary-fs-tablet: 0.66rem;
+$btn-fs-tablet: 0.64rem;
+$small-btn-fs-tablet: 0.62rem;
+$flow-cta-fs-tablet: 0.72rem;
+
+// Mobile breakpoint overrides (≤640px) - not used, using clamp() directly
+$hero-primary-fs-mobile: 0.62rem;
+$btn-fs-mobile: 0.6rem;
+$small-btn-fs-mobile: 0.58rem;
+$flow-cta-fs-mobile: 0.7rem;
+
+// Small phone breakpoints - not used, using clamp() directly
+$hero-primary-fs-phone: 0.6rem;
+$btn-fs-phone: 0.58rem;
+$small-btn-fs-phone: 0.54rem;
+$flow-cta-fs-phone: 0.66rem;
+
+// --------------------------------------------
+// Color Palette
+// --------------------------------------------
+// Primary blues
+$primary-blue-start: #3f76ff;
+$primary-blue-end: #2c60eb;
+$primary-blue-hover-start: #2c60eb;
+$primary-blue-hover-end: #234fc4;
+
+// Button gradients
+$hero-btn-start: #006dff;
+$hero-btn-end: #0055cf;
+$hero-btn-hover-start: #005de6;
+$hero-btn-hover-end: #0047ad;
+
+$flow-cta-start: #0070ff;
+$flow-cta-end: #0054cc;
+$flow-cta-hover-start: #005fe0;
+$flow-cta-hover-end: #0049aa;
+
+// Location-specific (New York)
+$location-ny-start: #0fbf93;
+$location-ny-end: #059a6f;
+
+// Text colors
+$text-primary: #1c1f28;
+$text-secondary: #2c343f;
+$text-tertiary: #556a86;
+$text-heading: #1c2643;
+$text-subdued: #333d4b;
+
+// Background colors
+$bg-white: #fff;
+$bg-gradient-light: linear-gradient(180deg, #ffffff, #fbfdff);
+$bg-modal-overlay: rgba(12, 18, 30, 0.46);
+
+// Border colors
+$border-light: rgba(0, 0, 0, 0.06);
+$border-medium: rgba(0, 0, 0, 0.12);
+$border-dark: rgba(18, 24, 40, 0.12);
+
+// Shadow colors
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 6px 22px -8px rgba(0, 0, 0, 0.25);
+$shadow-lg: 0 12px 34px -10px rgba(0, 95, 230, 0.55), 0 4px 12px -6px rgba(0, 0, 0, 0.3);
+$shadow-xl: 0 18px 42px -18px rgba(0, 0, 0, 0.55), 0 8px 22px -12px rgba(0, 0, 0, 0.4);
+
+// Focus ring
+$focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.55), 0 0 0 5px rgba(59, 130, 246, 0.25);
+$focus-ring-primary: 0 0 0 3px rgba(47, 123, 255, 0.35);
+
+// --------------------------------------------
+// Spacing & Sizing
+// --------------------------------------------
+$header-padding: 0.85rem 1.65rem;
+$header-gap: 1.2rem;
+$section-padding: 1.6rem 1.2rem 4.5rem;
+
+// Logo sizes
+$logo-width-desktop: 128px;
+$logo-width-tablet: 118px;
+$logo-width-mobile: 108px;
+
+// --------------------------------------------
+// Breakpoints
+// --------------------------------------------
+$breakpoint-xl: 1680px;
+$breakpoint-lg: 1440px;
+$breakpoint-desktop: 1280px;
+$breakpoint-laptop: 1100px;
+$breakpoint-tablet-lg: 1080px;
+$breakpoint-tablet: 920px;
+$breakpoint-tablet-sm: 780px;
+$breakpoint-mobile-lg: 640px;
+$breakpoint-mobile: 520px;
+$breakpoint-mobile-sm: 440px;
+$breakpoint-mobile-xs: 380px;
+$breakpoint-mobile-xxs: 340px;
+$breakpoint-mobile-tiny: 315px;
+
+// Height breakpoints for tall screens
+$height-tall: 900px;
+$height-extra-tall: 1080px;
+
+// --------------------------------------------
+// Transitions & Animations
+// --------------------------------------------
+$transition-fast: 0.2s;
+$transition-normal: 0.3s;
+$transition-slow: 0.45s;
+
+$ease-out: ease;
+$ease-in-out: ease-in-out;
+
+// --------------------------------------------
+// Z-Index Layering
+// --------------------------------------------
+$z-base: 1;
+$z-carousel-side: 1;
+$z-carousel-center: 3;
+$z-header: 100;
+$z-modal: 5000;
+
+// --------------------------------------------
+// Border Radius
+// --------------------------------------------
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 18px;
+$radius-pill: 26px;
+$radius-full: 50%;
+
+// --------------------------------------------
+// Font Families
+// --------------------------------------------
+$font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;

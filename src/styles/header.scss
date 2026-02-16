@@ -1,0 +1,363 @@
+// ============================================
+// Header Component Styles
+// ============================================
+// Global header navigation for neuroprofiling UI
+// Includes logo, language switcher, login/CTA buttons
+
+@import 'variables';
+
+// --------------------------------------------
+// Main Header Container
+// --------------------------------------------
+.mn-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $bg-white;
+  border-bottom: 1px solid $border-light;
+  z-index: $z-header;
+  width: 100%;
+}
+
+.mn-header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: $header-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// --------------------------------------------
+// Logo Section
+// --------------------------------------------
+.mn-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: $logo-width-desktop;
+  max-width: 45vw;
+  height: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+// --------------------------------------------
+// Navigation Container
+// --------------------------------------------
+.mn-nav {
+  display: flex;
+  align-items: center;
+  gap: $header-gap;
+}
+
+// --------------------------------------------
+// Language Switcher
+// --------------------------------------------
+.lang-wrapper {
+  position: relative;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: $bg-white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: $shadow-sm, 0 0 0 3px rgba(0, 0, 0, 0);
+  font-size: var(--small-btn-fs, $small-btn-fs);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  padding: 0.45rem 0.6rem 0.48rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: box-shadow $transition-normal, background $transition-normal, border-color $transition-normal;
+  position: relative;
+  color: $text-primary;
+
+  &:hover {
+    background: #f5f7fa;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: $focus-ring-primary;
+  }
+
+  .chevron {
+    font-size: 0.55rem;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.lang-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: auto;
+  background: $bg-white;
+  border: 1px solid $border-medium;
+  box-shadow: $shadow-md;
+  border-radius: 14px;
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 110px;
+  z-index: 60;
+
+  button {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: $text-primary;
+
+    &:hover {
+      background: #f2f6fa;
+    }
+
+    &.active {
+      background: #eef2ff;
+      color: #2736b8;
+    }
+  }
+}
+
+// --------------------------------------------
+// Login Button
+// --------------------------------------------
+.login-btn {
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: var(--small-btn-fs, $small-btn-fs);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 0.45rem 0.4rem;
+  color: $text-primary;
+  position: relative;
+
+  &:hover {
+    color: #111827;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+}
+
+// --------------------------------------------
+// CTA Button
+// --------------------------------------------
+.cta-btn {
+  background: linear-gradient(90deg, $primary-blue-start, $primary-blue-end);
+  color: $bg-white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: var(--btn-fs, $btn-fs);
+  padding: 0.5rem 1rem 0.55rem;
+  border: none;
+  border-radius: $radius-pill;
+  cursor: pointer;
+  box-shadow: 0 6px 22px -8px rgba(45, 100, 255, 0.55), 0 2px 4px -2px rgba(0, 0, 0, 0.35);
+  transition: background $transition-normal, transform 0.25s;
+  white-space: nowrap;
+
+  &:hover {
+    background: linear-gradient(90deg, $primary-blue-hover-start, $primary-blue-hover-end);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+}
+
+// --------------------------------------------
+// Responsive Header Adjustments
+// --------------------------------------------
+@media (max-width: $breakpoint-tablet-sm) {
+  .mn-header-inner {
+    padding: 0.7rem 1rem;
+  }
+
+  .logo-img {
+    width: 135px;
+  }
+
+  .mn-nav {
+    gap: 0.75rem;
+  }
+
+  .cta-btn {
+    padding: 0.48rem 0.95rem 0.52rem;
+  }
+
+  .login-btn {
+    padding: 0.42rem 0.38rem;
+  }
+
+  .lang-switch {
+    padding: 0.4rem 0.55rem 0.44rem;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-lg) {
+  .mn-header-inner {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .logo-img {
+    width: 125px;
+  }
+
+  .mn-nav {
+    gap: 0.6rem;
+  }
+
+  .cta-btn {
+    padding: 0.45rem 0.85rem 0.5rem;
+  }
+
+  .lang-switch {
+    padding: 0.38rem 0.5rem 0.42rem;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .logo-img {
+    width: 115px;
+  }
+
+  .mn-nav {
+    gap: 0.5rem;
+  }
+
+  .cta-btn {
+    padding: 0.42rem 0.75rem 0.46rem;
+  }
+
+  .login-btn {
+    padding: 0.38rem 0.32rem;
+  }
+
+  .lang-switch {
+    padding: 0.36rem 0.46rem 0.4rem;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-sm) {
+  .mn-header-inner {
+    padding: 0.6rem 0.7rem;
+  }
+
+  .logo-img {
+    width: 105px;
+  }
+
+  .mn-nav {
+    gap: 0.45rem;
+  }
+
+  .cta-btn {
+    padding: 0.4rem 0.65rem 0.44rem;
+    letter-spacing: 0.45px;
+  }
+
+  .login-btn {
+    letter-spacing: 0.45px;
+    padding: 0.36rem 0.28rem;
+  }
+
+  .lang-switch {
+    letter-spacing: 0.42px;
+    padding: 0.34rem 0.42rem 0.38rem;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-xs) {
+  .logo-img {
+    width: 98px;
+  }
+
+  .mn-nav {
+    gap: 0.4rem;
+  }
+
+  .cta-btn {
+    padding: 0.38rem 0.58rem 0.42rem;
+  }
+
+  .lang-switch {
+    padding: 0.32rem 0.4rem 0.36rem;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-xxs) {
+  .logo-img {
+    width: 90px;
+  }
+
+  .mn-header-inner {
+    padding: 0.5rem 0.45rem;
+  }
+
+  .mn-nav {
+    gap: 0.32rem;
+  }
+
+  .cta-btn {
+    padding: 0.36rem 0.48rem 0.4rem;
+    letter-spacing: 0.35px;
+  }
+
+  .login-btn {
+    letter-spacing: 0.35px;
+    padding: 0.34rem 0.25rem;
+  }
+
+  .lang-switch {
+    padding: 0.3rem 0.36rem 0.34rem;
+    letter-spacing: 0.35px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-tiny) {
+  .logo-img {
+    width: 85px;
+  }
+
+  .mn-nav {
+    gap: 0.28rem;
+  }
+
+  .cta-btn {
+    padding: 0.34rem 0.42rem 0.38rem;
+    letter-spacing: 0.3px;
+  }
+
+  .login-btn {
+    padding: 0.32rem 0.22rem;
+  }
+
+  .lang-switch {
+    padding: 0.28rem 0.32rem 0.32rem;
+  }
+}
