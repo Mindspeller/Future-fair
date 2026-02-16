@@ -13,7 +13,10 @@ export const jobFairTranslations = {
             mainText: 'You are about to book a slot for your free Brainwave reading.',
             disclaimer: 'Ticket for event is not included and the participant has to make sure they are eligible to attend the event.',
             confirm: 'Claim Free Slot',
-            privateSession: 'Book a private 1:1 session with one of our HR Partners'
+            privateSession: 'Book a private 1:1 session with one of our HR Partners',
+            neuroprofiling_footer_about: "About",
+            neuroprofiling_footer_legal: "Legal",
+            neuroprofiling_footer_contact: "Contact",
         }
     },
     nl: {
@@ -30,7 +33,10 @@ export const jobFairTranslations = {
             mainText: 'Je staat op het punt een plek te boeken voor je gratis Brainwave reading.',
             disclaimer: 'Ticket voor het evenement is niet inbegrepen. De deelnemer dient zelf te controleren of hij/zij gerechtigd is het evenement bij te wonen.',
             confirm: 'Claim Gratis Plek',
-            privateSession: 'Boek een privé 1:1 sessie met een van onze HR-partners'
+            privateSession: 'Boek een privé 1:1 sessie met een van onze HR-partners',
+            neuroprofiling_footer_about: "Over Ons",
+            neuroprofiling_footer_legal: "Juridisch",
+            neuroprofiling_footer_contact: "Contact",
         }
     }
 };
