@@ -8,6 +8,9 @@
           <span class="np-footer-separator">-</span>
           <a href="https://ads.mindspeller.com/contact/" target="_blank" rel="noopener" class="np-footer-link">{{ t('message.neuroprofiling_footer_contact') }}</a>
         </div>
+
+
+        
       </div>
     </footer>
 </template>
