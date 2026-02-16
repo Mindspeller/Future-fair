@@ -4,10 +4,10 @@ import JobFairPage from './components/JobFairPage.vue'
 const routes = [
     {
         path: '/',
-        redirect: '/futureFair_23March_Belgium'
+        redirect: '/superNova_23March_Belgium'
     },
     {
-        path: '/futureFair_23March_Belgium',
+        path: '/superNova_23March_Belgium',
         name: 'JobFair',
         component: JobFairPage
     }
