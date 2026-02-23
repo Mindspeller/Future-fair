@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        sessionStorage.redirect = location.href;
+        var l = window.location;
+        l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            '/?path=' + encodeURIComponent(l.pathname + l.search + l.hash)
+        );
     </script>
-    <meta http-equiv="refresh" content="0;URL='/'">
 </head>
 
 <body>
