@@ -1,10 +1,8 @@
 <template>
-  <div class="job-fair-page">
-
     <section class="job-fair-hero">
       <div class="hero-inner">
         <div class="hero-character">
-          <img src="../assets/The Future 2.png" alt="Mindspeller character" class="character-image">
+          <img src="../assets/EKONOMIKA JOBFAIR.png" alt="Mindspeller character" class="character-image">
 
         </div>
 
@@ -19,11 +17,11 @@
                 <path d="M42.2393 36.1435C42.2393 34.5278 43.549 33.218 45.1647 33.218H53.2048C54.8205 33.218 56.1303 34.5278 56.1303 36.1435V43.2714H42.2393V36.1435Z" stroke="#4534DA" stroke-width="2.92547"/>
               </svg>
             </span>
-            <span class="badge-text">{{ $t('message.badge') }}</span>
+            <span class="badge-text">{{ $t('message.badgeEkonomika') }}</span>
           </div>
 
           <h1 class="hero-title">
-            {{ $t('message.titleFirst') }} @<br>{{ $t('message.titleSecond') }}
+            {{ $t('message.titleFirst') }} @<br>{{ $t('message.titleEkonomika') }}
           </h1>
 
           <p class="hero-subtitle">
@@ -32,12 +30,11 @@
 
           <div class="cta-section">
             <button class="cta-button" @click="claimTicket">{{ $t('message.cta') }}</button>
-            <p class="slots-remaining"><i><strong>Only 125 </strong>{{ $t('message.slotsRemaining') }}</i></p>
+            <p class="slots-remaining"><i><strong>Only 12 </strong>{{ $t('message.slotsRemaining') }}</i></p>
           </div>
         </div>
       </div>
     </section>
-
 
     <section class="how-help-section">
       <div class="how-help-inner">
@@ -64,7 +61,6 @@
       </div>
     </section>
 
-
     <transition name="fade">
       <div v-if="showBookingPopup" class="booking-backdrop" role="dialog" aria-modal="true" aria-labelledby="confirm-heading">
         <div class="booking-modal" role="dialog" aria-modal="true">
@@ -90,7 +86,7 @@
             <button type="button" class="booking-action-btn" >
               <a 
                 class="book-aTag" 
-                href="https://www.eventbrite.com/e/mindspeller-neuroprofiling-supernova-job-fair-tickets-1980472741282?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+                href="https://www.eventbrite.be/e/mindspeller-neuroprofiling-ekonomika-career-brunch-ii-tickets-1983755754864?aff=oddtdtcreator"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -102,8 +98,9 @@
         </div>
       </div>
     </transition>
-  </div>
 </template>
+
+
 
 <script setup>
 
@@ -112,15 +109,14 @@ import { useI18n } from 'vue-i18n';
 import { useHead } from '@unhead/vue'
 
 const { t } = useI18n();
-
 useHead({
-  title: 'Mindspeller@Future Fair',
+  title: 'Mindspeller@Ekonomika Career Brunch II',
   meta: [
-    { name: 'description', content: 'Join us at the Future Job Fair to get a free Mindspeller brainwave reading ' },
-    { property: 'og:title', content: 'Mindspeller@Future Fair' },
-    { property: 'og:description', content: 'Join us at the Future Job Fair to get a free Mindspeller brainwave reading ' },
-    { property: 'og:image', content: '/og.jpg' },
-    { property: 'og:url', content: 'https://futurejobfair.mindspeller.com/superNova_23March_Belgium' },
+    { name: 'description', content: 'Join us at the Ekonomika Career Brunch II to get a free Mindspeller brainwave reading ' },
+    { property: 'og:title', content: 'Mindspeller@Ekonomika Career Brunch II' },
+    { property: 'og:description', content: 'Join us at the Ekonomika Career Brunch II to get a free Mindspeller brainwave reading ' },
+    { property: 'og:image', content: '/EKONOMIKA og.png' },
+    { property: 'og:url', content: 'https://futurejobfair.mindspeller.com/ekonomika_jobfair_26February_Belgium' },
     { property: 'og:type', content: 'website' },
   ],
 })
@@ -186,4 +182,3 @@ const closeBookingPopup = () => {
 
 import '../styles/jobFair.scss';
 </script>
-

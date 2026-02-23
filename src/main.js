@@ -3,6 +3,7 @@ import App from './App.vue'
 import { createI18n } from 'vue-i18n'
 import { jobFairTranslations } from './translations/jobFair.js'
 import router from './router'
+import { createHead } from '@unhead/vue'
 
 const i18n = createI18n({
   legacy: false,
@@ -10,7 +11,13 @@ const i18n = createI18n({
   fallbackLocale: 'en',
   messages: jobFairTranslations,
 })
+
+
+
+const head = createHead()
 const app = createApp(App)
+
+app.use(head)
 app.use(i18n)
 app.use(router)
 app.mount('#app')

@@ -2,8 +2,10 @@ export const jobFairTranslations = {
     en: {
         message: {
             badge: 'The Future Job Fair',
+            badgeEkonomika: 'Ekonomika Job Fair',
             titleFirst: 'Mindspeller',
             titleSecond: 'SuperNova Job Fair.',
+            titleEkonomika: 'Ekonomika Job Fair.',
             subtitle: 'Is your career the right path? Don\'t leave that question up to chance. Claim your free mindspeller brainwave reading session',
             cta: 'Claim your free slot',
             slotsRemaining: 'slots remaining',
@@ -22,8 +24,10 @@ export const jobFairTranslations = {
     nl: {
         message: {
             badge: 'The Future Job Fair',
+            badgeEkonomika: 'Ekonomika Job Fair',   
             titleFirst: 'Mindspeller',
             titleSecond: 'SuperNova Job Fair.',
+            titleEkonomika: 'Ekonomika Job Fair.',
             subtitle: 'Is jouw carrière het juiste pad? Laat die vraag niet aan het toeval over. Claim je gratis Mindspeller brainwave reading sessie.',
             cta: 'Claim je gratis plek',
             slotsRemaining: 'plekken beschikbaar',
