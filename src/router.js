@@ -7,11 +7,11 @@ const routes = [
         path: '/',
         redirect: '/ekonomika_jobfair_26February_Belgium'
     },
-    // {
-    //     path: '/superNova_23March_Belgium',
-    //     name: 'JobFair',
-    //     component: JobFairPage
-    // },
+    {
+        path: '/superNova_23March_Belgium',
+        name: 'JobFair',
+        component: JobFairPage
+    },
     {
         path: '/ekonomika_jobfair_26February_Belgium',
         name: 'EkonomikaJF',
