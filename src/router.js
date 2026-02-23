@@ -4,10 +4,6 @@ import EkonomikaJF from './components/EkonomikaJF.vue'
 
 const routes = [
     {
-        path: '/',
-        redirect: '/superNova_23March_Belgium'
-    },
-    {
         path: '/superNova_23March_Belgium',
         name: 'JobFair',
         component: JobFairPage
