@@ -1,3 +1,9 @@
+const params = new URLSearchParams(window.location.search);
+const path = params.get('path');
+if (path) {
+  window.history.replaceState(null, '', decodeURIComponent(path));
+}
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createI18n } from 'vue-i18n'
