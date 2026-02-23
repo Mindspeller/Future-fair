@@ -1,8 +1,10 @@
 const params = new URLSearchParams(window.location.search);
 const path = params.get('path');
 if (path) {
-  window.history.replaceState(null, '', decodeURIComponent(path));
+  const cleanPath = decodeURIComponent(path).split('?path=')[0];
+  window.history.replaceState(null, '', cleanPath);
 }
+
 
 import { createApp } from 'vue'
 import App from './App.vue'

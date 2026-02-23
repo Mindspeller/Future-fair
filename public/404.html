@@ -7,10 +7,12 @@
     <title>Redirecting...</title>
     <script>
         var l = window.location;
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            '/?path=' + encodeURIComponent(l.pathname + l.search + l.hash)
-        );
+        if (l.pathname !== '/') {
+            l.replace(
+                l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                '/?path=' + encodeURIComponent(l.pathname)
+            );
+        }
     </script>
 </head>
 
