@@ -5,18 +5,18 @@ import EkonomikaJF from './components/EkonomikaJF.vue'
 const routes = [
     {
         path: '/',
-        redirect: '/ekonomika_jobfair_26February_Belgium'
+        redirect: '/superNova_23March_Belgium'
+    },
+    {
+        path: '/superNova_23March_Belgium',
+        name: 'JobFair',
+        component: JobFairPage
     },
     // {
-    //     path: '/superNova_23March_Belgium',
-    //     name: 'JobFair',
-    //     component: JobFairPage
-    // },
-    {
-        path: '/ekonomika_jobfair_26February_Belgium',
-        name: 'EkonomikaJF',
-        component: EkonomikaJF
-    }
+    //     path: '/ekonomika_jobfair_26February_Belgium',
+    //     name: 'EkonomikaJF',
+    //     component: EkonomikaJF
+    // }
 ]
 
 const router = createRouter({
